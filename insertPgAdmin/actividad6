@@ -1,0 +1,2 @@
+DELETE FROM "post" WHERE author_id in (SELECT id FROM "user" WHERE username ilike 'steve%');
+DELETE FROM "user" WHERE id in (SELECT DISTINCT author_id FROM post p JOIN "user" u ON p.author_id = u.id WHERE username = 'steve')

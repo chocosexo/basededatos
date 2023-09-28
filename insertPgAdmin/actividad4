@@ -1,0 +1,2 @@
+INSERT INTO "user"(username, password)
+VALUES ('Messi', (SELECT password FROM user WHERE username ilike 'steve%'))

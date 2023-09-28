@@ -1,0 +1,4 @@
+INSERT INTO "user" (username, password)
+VALUES('steve', 'bala'),('santi', 'puto');
+INSERT INTO "post" (author_id, title, body)
+VALUES((SELECT id FROM user WHERE username like "%steve%"), 'nico bobo'

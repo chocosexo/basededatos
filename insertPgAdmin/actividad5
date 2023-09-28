@@ -1,0 +1,3 @@
+UPDATE "post" SET
+title = 'yo no soy azucar', body = ''
+WHERE author_id in (SELECT id from "user" WHERE "username" ilike 'steve%')
